@@ -1,10 +1,19 @@
+const reactDescriptions = ["Fundamentals", "Crucial", "Core"]
+
+function generateRandomNumber(maximum) {
+    return Math.floor(Math.random() * (maximum + 1))
+}
+
 function Header() {
+    const index = generateRandomNumber(2)
+    const description = reactDescriptions[index]
+
     return (
         <header>
             <img src="src/assets/react-core-concepts.png" alt="Stylized atom"/>
             <h1>React Essentials</h1>
             <p>
-                Fundamental React concepts you will need for almost any app you are going to build
+                {description} React concepts you will need for almost any app you are going to build
             </p>
         </header>
     )
