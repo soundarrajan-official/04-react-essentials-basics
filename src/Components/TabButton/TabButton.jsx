@@ -1,35 +1,23 @@
-export default function TabButton({children}) {
-    function handleClick() {
-        console.log("Components or JSX Button Clicked")
-    }
-
+export default function TabButton({children, onSelect}) {
     return (
         <li>
-            <button onClick={handleClick}>{children}</button>
+            <button onClick={onSelect}>{children}</button>
         </li>
     )
 }
 
 export function TabButtonWithProps(props) {
-    function handleClick() {
-        console.log("Props Button Clicked")
-    }
-
     return (
         <li>
-            <button onClick={handleClick}>{props.children}</button>
+            <button onClick={props.onSelect}>{props.children}</button>
         </li>
     )
 }
 
-export function TabButtonWithLabel({label}) {
-    function handleClick() {
-        console.log("State Button Clicked")
-    }
-
+export function TabButtonWithLabel({label, onSelect}) {
     return (
         <li>
-            <button onClick={handleClick}>{label}</button>
+            <button onClick={onSelect}>{label}</button>
         </li>
     )
 }

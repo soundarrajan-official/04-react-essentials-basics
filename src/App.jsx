@@ -6,6 +6,10 @@ import TabButton from "./Components/TabButton/TabButton.jsx";
 import { TabButtonWithLabel, TabButtonWithProps } from "./Components/TabButton/TabButton.jsx";
 
 function App() {
+    function handleSelect() {
+        console.log("Button Clicked")
+    }
+
     return (
         <div>
             <Header />
@@ -33,10 +37,10 @@ function App() {
                 <section id="examples">
                     <h2>Examples</h2>
                     <menu>
-                        <TabButton>Components</TabButton>
-                        <TabButton>JSX</TabButton>
-                        <TabButtonWithProps>Props</TabButtonWithProps>
-                        <TabButtonWithLabel label="State" />
+                        <TabButton onSelect={handleSelect}>Components</TabButton>
+                        <TabButton onSelect={handleSelect}>JSX</TabButton>
+                        <TabButtonWithProps onSelect={handleSelect}>Props</TabButtonWithProps>
+                        <TabButtonWithLabel label="State" onSelect={handleSelect}/>
                     </menu>
                 </section>
             </main>
