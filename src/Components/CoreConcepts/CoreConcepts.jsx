@@ -1,3 +1,5 @@
+import "./CoreConcpets.css"
+
 // using object destructuring for props
 export default function CoreConcepts({title, description, image}) {
     return (
